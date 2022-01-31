@@ -78,7 +78,7 @@ for (let i = 0; i < stuff.length; i++) {
 }
 //FIND OUT WHY APPEND DOSENT WORK
 
-    article.append(stuffList);
+    //article.append(stuffList);
 
 //item of array/ for of
 
@@ -88,7 +88,7 @@ for(const item of stuff){
     stuffList.append(listItem);
 }
 //WHY ISNT APPEND ELEMENT WORK????
-article.append(stuffList)
+//article.append(stuffList)
 
 
 // for each          learn why "string is not working"
@@ -105,4 +105,15 @@ stuff.forEach(() => {
     console.log("this is an arrow function")
 
 });
+
+
+//loop on an object 
+for(const signleObject in nestedObjects) {
+    let listItem = document.createElement("li")
+    console.log(signleObject[signleObject].name)
+    listItem.innerHTML = `Name: ${nestedObjects}[name]`
+    stuffList.append(listItem);
+
+}
+article.append(stuffList)
 
