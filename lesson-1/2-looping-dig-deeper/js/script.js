@@ -54,3 +54,55 @@ const nestedObjects = {
     },
 };
 
+//1. select the articel tag
+
+//2. create a tag using javaScript ul
+//3. loop on the array 
+//4. create another tag 
+//5. add the items in the array to the inner HTML of this tag
+//6. add all the new tags in the parent tag ul
+//7. add everything in the articel tag ul >> inside the articel tag
+
+const article = document.querySelector(".article");
+
+let stuffList = document.createElement("ul")
+
+for (let i = 0; i < stuff.length; i++) {
+    let listItem = document.createElement("li")
+    console.log(stuff[i]);
+    listItem.innerHTML = stuff[i];
+    console.log(listItem);
+    stuffList.append(listItem);
+
+    console.log(stuffList)
+}
+//FIND OUT WHY APPEND DOSENT WORK
+
+    article.append(stuffList);
+
+//item of array/ for of
+
+for(const item of stuff){
+    let listItem = document.createElement("li");
+    listItem.innerHTML = item;
+    stuffList.append(listItem);
+}
+//WHY ISNT APPEND ELEMENT WORK????
+article.append(stuffList)
+
+
+// for each          learn why "string is not working"
+stuff.forEach(function (item) {
+    let listItem = document.createElement("li");
+    listItem.innerHTML = item;
+    stuffList.append(listItem);
+
+});
+
+
+//arrow function
+stuff.forEach(() => {
+    console.log("this is an arrow function")
+
+});
+
