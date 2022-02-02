@@ -23,15 +23,43 @@ const myInput = document.querySelector("#firstname");
     console.log(event.target);
 }
 //myInput.addEventListener("keydown", handelKeyPress);
-    const thePetButton = document.querySelector(".pet-btn");
+const thePetButton = document.querySelector(".pet-btn");
     const handelMouseOver = function(){
     thePetButton,classList,add("hover")
     };
 
     //thePetButton.addEventListener("mouseover", handelMouseOver)
 
-    const handelMouseOut = function (){
-        thePetButton.classList.remove("hover");
+const handelMouseOut = function (){
+    thePetButton.classList.remove("hover");
 
     }
     //thePetButton.addEventListener("mouseout", handelMouseOut);
+
+    //Question 6 select all the li 
+    //on mouse over show the dataset of animal they have
+//1. select all li elements
+
+// 2. loop on the liś
+
+//3. create a function expresion wich console.log for me the event.
+const listItems = document.querySelector("li");
+console.log(listItems)
+
+for(let i = 0; i < listItems.length; i++){
+    listItems[i].addEventListener("mouseover", hoverListItem)
+
+}
+function hoverListItem(event) {
+    console.log(event.target.data.animal)
+}
+
+isacFunction();
+function isacFunction() {
+    console.log("this is a basic function where the function is celled before the function")
+}
+
+(function autoFunction() {
+    console.log("auto")
+})();
+
