@@ -58,8 +58,19 @@ isacFunction();
 function isacFunction() {
     console.log("this is a basic function where the function is celled before the function")
 }
-
+//AUTOMATIV FUNCTION TESTS
 (function autoFunction() {
     console.log("auto")
 })();
 
+(function autmativ() {
+    console.log("hey there")
+})();
+
+//LOG FUNCTION BEFORE FUNCTION
+birdMan()
+function birdMan() {
+    console.log("this is being logged before function")
+};
+
+//selecting the btn class and changin style
